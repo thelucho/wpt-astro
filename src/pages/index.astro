@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
 import PlayerGrid from '../components/PlayerGrid.astro'
 import PlayerCard from '../components/PlayerCard.astro'
+import backgroundImage from '../assets/images/wpt-bg.png'
 
 const API_HOST = import.meta.env.API_HOST
 const API_TOKEN = import.meta.env.API_TOKEN
@@ -26,13 +27,13 @@ const { data } = await response.json()
 ---
 
 <Layout title="World Padel Tour ">
-	<main class="bg-center-top bg-no-repeat bg-[url('images/wpt-bg.png')] bg-blend-multiply w-full">
+	<main class={`bg-center-top bg-no-repeat bg-blend-multiply w-full`} style={`background-image: url(${backgroundImage.src})`}>
 
 		<Hero
       title="Get to know the news from the world of WPT"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     />
-    
+
     <PlayerGrid>
       {
         data.map((player, index) => (
