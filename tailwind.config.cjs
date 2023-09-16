@@ -2,7 +2,14 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['"Poppins"', 'sans-serif'],
+      },
+      fontSize: {
+        '9xl': ['17rem', '140px'],
+      }
+    },
 	},
 	plugins: [],
 }
