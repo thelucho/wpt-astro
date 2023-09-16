@@ -14,11 +14,7 @@ const menuItems = [
   {
     name: 'Ranking',
     slug: '/ranking'
-  },
-  {
-    name: 'Contact',
-    slug: '/contact'
-  },
+  }
 ]
 
 export default menuItems

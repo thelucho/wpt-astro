@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/Hero.astro'
+import backgroundImage from '../assets/images/wpt-background.png'
+---
+
+<Layout title="World Padel Tour ">
+  <main class={`bg-center-top bg-no-repeat bg-blend-multiply w-full`} style={`background-image: url(${backgroundImage.src})`}>
+    <Hero
+      title="Get your tickets"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    />
+  </main>
+</Layout>
