@@ -23,7 +23,13 @@ const options = {
 }
 
 const response = await fetch(url, options)
-const { data } = await response.json()
+var { data } = await response.json()
+
+// Append API_TOKEN to the "image" key in each element of the "data" array
+data = data.map(item => ({
+  ...item,
+  image: item.image + "?rapidapi-key=" + API_TOKEN
+}));
 ---
 
 <Layout title="World Padel Tour ">
